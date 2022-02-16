@@ -1,0 +1,241 @@
+package happykingproject;
+import java.util.*;
+import java.text.*;
+import java.util.Scanner;
+/**
+ *
+ * @author Chris
+ */
+public class HappyKingProject {
+
+  
+    public static void main(String []args) throws Exception  
+   {
+       Scanner input = new Scanner(System.in);
+       String  name, order,Pnum, again;
+       int price1 = 0, quantity =0, loop1=0, total = 0, payment = 0, ans = 0;
+       Date dNow = new Date(); 
+      
+       System.out.println("HELLO WELCOME TO HAPPY KING, WHAT DO YOU WANT TO ORDER?");
+   System.out.print("Name:");
+name = input.nextLine();
+   System.out.println("Phone Number : ");
+      Pnum = input.nextLine();
+     System.out.println("********************MENU LIST************************");
+     System.out.println("");
+     System.out.println("***********************Burgers***********************");
+     System.out.println("");
+     System.out.println("(A1) Cheese Burger ------------------------------ ₱85");
+     System.out.println("(A2) Cheese Burger Deluxe ---------------------- ₱120");
+     System.out.println("(A3) Happy King Mac ---------------------------- ₱140");
+     System.out.println("(A4) Chiken Burger ------------------------------ ₱95");
+     System.out.println("");
+     System.out.println("*****************Chicken & Platters******************");
+     System.out.println("");
+     System.out.println("(B1) Happy Chiken with Spagetti ---------------- ₱110");
+     System.out.println("(B2) 2pc Happy Chicken with rice --------------- ₱145");
+     System.out.println("(B3) 6pc HK Chicken nuggets with Fries --------- ₱148");
+     System.out.println("(B4) Crispy Chicken Fillet with Rice and Fries -- ₱90");
+     System.out.println("(B5) 1pc Chicken and Spaghetti ------------------ ₱95");
+     System.out.println("(B6) Burger Steak with Rice --------------------- ₱90");
+     System.out.println("(B7) Happy King 6pc Chicken Bucket ------------- ₱330");
+     System.out.println("");
+     System.out.println("***********************Drinks************************");
+     System.out.println("");
+     System.out.println("(C1) Coke --------------------------------------- ₱15");
+     System.out.println("(C2) Sprite ------------------------------------- ₱15");
+     System.out.println("(C3) HkFloat ------------------------------------ ₱29");
+     System.out.println("(C4) IceCream chocolate Sundae ------------------ ₱49");
+     System.out.println("(C5) IceCream Caramel Sundae -------------------- ₱49");
+     System.out.println("(C6) Oreo IceCream ------------------------------ ₱49");
+     System.out.println("(C7) Ube IceCream ------------------------------- ₱49");
+     System.out.println("(C8) Strawberry IceCream ------------------------ ₱49");
+     System.out.println("(C9) Orange Juice ------------------------------- ₱29");
+     System.out.println("(C10) Pineapple Juice --------------------------- ₱29");
+     System.out.println("");
+     System.out.println("***************Hot and cold Coffee*******************");
+     System.out.println("");
+     System.out.println("(D1) Iced Americano ---------------------------- ₱120");
+     System.out.println("(D2) Iced Latte -------------------------------- ₱145");
+     System.out.println("(D3) Iced Mocha -------------------------------- ₱145");
+     System.out.println("(D4) Double Choco Frappe ----------------------- ₱150");
+     System.out.println("(D5) Caramel Frappe ---------------------------- ₱147");
+     System.out.println("(D6) Mocha Frappe ------------------------------ ₱147");
+     System.out.println("(D7) Latte Frappe ------------------------------ ₱147");
+     System.out.println("(D8) Strawberry Smoothie ----------------------- ₱125");
+     System.out.println("(D9) Hot Chocolate ----------------------------- ₱120");
+     System.out.println("(D10) Premium Roasted Coffee -------------------  ₱75");
+     System.out.println("(D11) Cafe Latte ------------------------------- ₱147");
+     System.out.println("");
+     
+     
+    
+    do{
+        System.out.println("");
+        System.out.print("Enter Code Order:");
+         order = input.nextLine();
+         // BURGERS//********************************************************************
+    if (order.equalsIgnoreCase("A1")) {
+price1=85;
+System.out.println("Order Description : Cheese Burger ");
+} else if (order.equalsIgnoreCase("A2")) {
+price1=120;
+System.out.println("Order Description : Cheese Burger Deluxe");
+}
+  else if (order.equalsIgnoreCase("A3")) {
+price1 = 140;
+System.out.print("Order Description : Happy King Mac");
+}
+  else if (order.equalsIgnoreCase("A4")) {
+price1=95;
+System.out.println("Order Description : Chicken Burger");
+}
+           //Chicken and flatters//*********************************************
+  else if (order.equalsIgnoreCase("B1")) {
+price1=110;
+System.out.println("Order Description : Happy Chiken with Spagetti");
+}
+    else if (order.equalsIgnoreCase("B2")) {
+price1=145;
+System.out.println("Order Description : 2pc Happy Chicken with rice");
+}
+    else if (order.equalsIgnoreCase("B3")) {
+price1=148;
+System.out.println("Order Description : 6pc HK Chicken nuggets with Fries");
+}
+    else if (order.equalsIgnoreCase("B4")) {
+price1=90;
+System.out.println("Order Description : Crispy Chicken Fillet with Rice and Fries");
+}
+    else if (order.equalsIgnoreCase("B5")) {
+price1=95;
+System.out.println("Order Description : 1pc Chicken and Spaghetti");
+}
+    else if (order.equalsIgnoreCase("B6")) {
+price1=90;
+System.out.println("Order Description : Burger Steak with Rice");
+}
+    else if (order.equalsIgnoreCase("B7")) {
+price1=330;
+System.out.println("Order Description : Happy King 6pc Chicken Bucket");
+}
+                        //DRINKS//**********************************************
+    else if (order.equalsIgnoreCase("C1")) {
+price1=15;
+System.out.println("Order Description : Coke");
+}
+    else if (order.equalsIgnoreCase("C2")) {
+price1=15;
+System.out.println("Order Description : Sprite");
+}
+    else if (order.equalsIgnoreCase("C3")) {
+price1=29;
+System.out.println("Order Description : Coke Float");
+}
+     else if (order.equalsIgnoreCase("C4")) {
+price1=49;
+System.out.println("Order Description : IceCream chocolate Sundae");
+}    else if (order.equalsIgnoreCase("C5")) {
+price1=49;
+System.out.println("Order Description : IceCream Caramel Sundae");
+}    else if (order.equalsIgnoreCase("C6")) {
+price1=49;
+System.out.println("Order Description : Oreo IceCream");
+}
+    else if (order.equalsIgnoreCase("C7")) {
+price1=49;
+System.out.println("Order Description : Ube IceCream");
+}    else if (order.equalsIgnoreCase("C8")) {
+price1=49;
+System.out.println("Order Description : Strawberry IceCream");
+}    else if (order.equalsIgnoreCase("C9")) {
+price1=29;
+System.out.println("Order Description : Orange Juice");
+}    else if (order.equalsIgnoreCase("C10")) {
+price1=29;
+System.out.println("Order Description : Pineapple Juice");
+}    
+                  // HOT AND COLD COFFEE//
+    else if (order.equalsIgnoreCase("D1")) {
+price1=120;
+System.out.println("Order Description : Iced Americano");
+}    else if (order.equalsIgnoreCase("D2")) {
+price1=145;
+System.out.println("Order Description : Iced Latte");
+}    else if (order.equalsIgnoreCase("D3")) {
+price1=145;
+System.out.println("Order Description : Iced Mocha");
+}    else if (order.equalsIgnoreCase("D4")) {
+price1=150;
+System.out.println("Order Description : Double Choco Frappe");
+}    else if (order.equalsIgnoreCase("D5")) {
+price1=147;
+System.out.println("Order Description : Caramel Frappe");
+}    else if (order.equalsIgnoreCase("D6")) {
+price1=147;
+System.out.println("Order Description : Mocha Frappe");
+}    else if (order.equalsIgnoreCase("D7")) {
+price1=147;
+System.out.println("Order Description : Latte Frappe");
+}    else if (order.equalsIgnoreCase("D8")) {
+price1=125;
+System.out.println("Order Description : Strawberry Smoothie");
+}    else if (order.equalsIgnoreCase("D9")) {
+price1=120;
+System.out.println("Order Description : Hot Chocolate");
+}    else if (order.equalsIgnoreCase("D10")) {
+price1=75;
+System.out.println("Order Description : Premium Roasted Coffee");
+}  
+     else if (order.equalsIgnoreCase("D11")) {
+price1=147;
+System.out.println("Order Description : Cafe Latte");
+}    
+     else{ System.out.println("That is not a Choice, Please choose your order"); 
+      break;}
+    System.out.print("Enter Quantity : ");
+quantity= Integer.parseInt(input.nextLine());
+
+  total += price1 * quantity; 
+System.out.print("Another Order? (Y)yes/(N)no : ");
+again = input.nextLine();
+if (again.equalsIgnoreCase("y"))
+  loop1=loop1+1;
+else loop1 = loop1-1;
+ } while (loop1 == 1);
+ 
+    
+  
+    
+ System.out.println("*******************Sales Reciept************************");
+ 
+                //Time// 
+   SimpleDateFormat ft =
+    new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm a");
+    System.out.println("current Date: " + ft.format(dNow));   
+                //Time//
+ 
+ System.out.println("total price :" + total); 
+ 
+ System.out.print("enter payment :");
+ payment = Integer.parseInt(input.nextLine());
+     ans = payment - total;
+     
+    System.out.println("Name: " + name);  
+    System.out.println("Phone Number : " + Pnum); 
+ if (total < payment){
+ System.out.println("Your charge is :" + ans);
+ System.out.print("Thank you!");
+ }
+ else if ( total > payment){
+     System.out.print("Insuffitient balance!");
+ }     
+ else if (total == payment){
+     System.out.print("Thank you!");
+ }     
+       
+ 
+    
+    }
+    
+}
